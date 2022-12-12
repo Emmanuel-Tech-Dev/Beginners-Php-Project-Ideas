@@ -1,0 +1,146 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* outline: 2px solid red;  */
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 10px;
+    min-height: 100vh;
+    background: #b7c3da;
+}
+
+.wrapper{
+    width: 720px;
+    background: #e4e4eb;
+    border-radius: 5px;
+}
+.wrapper header{
+    font-size: 20px;
+    font-weight: 600;
+    padding: 20px 30px;
+    border-bottom: 1px solid #b7c3da;
+}
+
+form .status{
+    margin:20px 0;
+    max-width: 100%  ;
+    padding: 10px;
+    background-color: #bad7ef;
+    border-radius: 2.5px;
+    display: none ;
+}
+form span{
+  color: #4091d7;
+}
+.wrapper form{
+        margin: 35px 30px;
+
+}
+form .form-field{
+  display: flex;
+  align-items:center ;
+  margin-bottom: 35px;
+ justify-content: space-between;
+
+}
+.form-field .field{
+    height: 50px;
+    position: relative;
+    width: calc(100% / 2 - 13px); 
+}
+
+form .field input,
+form .message textarea{
+
+    height: 100%;
+    width: 100%;
+    outline: none;
+    padding: 0 18px 0 45px;
+    font-size: 16px;
+    border: 1px solid #b7c3da ;
+    border-radius:2.5px ;
+}
+form .field input::placeholder,
+form .message textarea::placeholder{
+    color: #b7c3da;
+}
+
+
+form .field input:focus,
+form .message textarea:focus{
+    border: 2px solid #7ea2e5;
+}
+
+form .field input:focus ~ i,
+form .message textarea:focus ~ i{
+   color:  #7ea2e5;
+}
+
+
+ .wrapper form i{
+    position: absolute;
+    left: 18px;
+    top:50%;
+    color: #b7c3da;
+    font-size: 17px;
+    pointer-events: none;
+    transform: translateY(-50%);
+}
+form .message{
+    position: relative;
+}
+
+form .message i{
+    top: 26px;
+    font-size: 20px;
+}
+ form .message textarea{
+    min-width: 100%;
+    max-width: 100%;
+    min-height: 120px;
+    max-height: 300px;
+    padding: 15px 20px 0 48px;
+
+ }
+form .button-area{
+    margin: 25px 0;
+}
+
+.button-area button{
+    font-size: 18px;
+    border: none;
+    background: #7ea2e5;
+    padding: 13px 25px;
+    border-radius: 5px;
+    color:#e4e4eb;
+    cursor: pointer;
+}
+
+
+
+@media(max-width:700px){
+    .wrapper header{
+        text-align: center;
+    }
+    form .form-field{
+        flex-direction: column;
+        margin-bottom: 0;
+
+    }
+    .form-field .field{
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    form .message textarea{
+        resize: none;
+    }
+    .button-area button{
+        width: 100%;
+    }
+}
